@@ -5,10 +5,13 @@ public static void main(String[] args) {
 Robot rob = new Robot();
 rob.setSpeed(200);
 drawSquare(rob);
-rob.pen
+rob.penUp();
 rob.move(100);
+rob.penDown();
 drawCircle(rob);
-
+rob.penUp();
+rob.move(100);
+drawTriangle(rob);
 
 
 
@@ -41,7 +44,7 @@ private static void drawTriangle(Robot rob) {
 			for (int i = 0; i < 4; i++) {
 				rob.penDown();
 				rob.turn(120);
-				rob.move(50);
+				rob.move(65);
 }
 }
 }
