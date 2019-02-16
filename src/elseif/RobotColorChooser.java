@@ -16,8 +16,11 @@ public class RobotColorChooser {
 		//1. Create a new Robot
 		Robot randy=new Robot();
 		//3. Ask the user what color they would like the robot to draw
-		String input = JOptionPane.showInputDialog("What color do you want the robot to draw? Pink, Green, or Red");
+		for(int num = 0; num < 10; num ++) {
+		randy.setPenWidth(10);
+			String input = JOptionPane.showInputDialog("What color do you want the robot to draw? Pink, Green, or Red");
 		//5. Use an if/else statement to set the pen color that the user requested
+randy.setSpeed(250);
 if(input.equals("Green")) {
 randy.setPenColor(Color.green);	
 }
@@ -38,8 +41,11 @@ randy.setPenColor(Color.red);
 for(int i=0;i<5;i++) {
 	randy.penDown();
 	randy.turn(144);
-	randy.move(100);
+	randy.move(50);
 		}
 
+randy.penUp();
+randy.move(110);
 	}
+}
 }
